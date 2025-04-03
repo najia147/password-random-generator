@@ -1,0 +1,190 @@
+body {
+ 
+}
+
+.container {
+  width: 60%;
+  margin:auto;
+  height: 50%;
+  margin-top: 10%;
+  justify-content: center;
+  text-align: center;
+}
+
+#password {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#text {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 3rem;
+  color:hsl(60, 2%, 11%);
+}
+
+ .main-container {
+   display: flex;
+   margin:auto;
+   align-items: center;
+   gap: 10px;
+   background: white;
+   border-radius: 25px;
+   padding: 10px;
+   width: 400px;
+ }
+
+ .main {
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+ }
+
+ .content {
+   display: flex;
+   align-items: center;
+   background: white;
+   padding: 10px;
+   border: 2px solid hsl(0, 30%, 95%);
+   border-radius: 25px;
+   flex-grow: 1;
+   justify-content: space-between;
+ }
+
+ #password {
+   flex-grow: 1;
+   margin: 0;
+   font-family: monospace;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+
+ button {
+   border: none;
+   cursor: pointer;
+   padding: 8px 15px;
+   border-radius: 20px;
+ }
+
+ button#copy {
+   background: #007bff;
+   color: white;
+   font-weight: bold;
+ }
+
+ button#copy:hover {
+   background: #0056b3;
+ }
+
+ .content button {
+   background: #ddd;
+ }
+
+ .content button:hover {
+   background: #ccc;
+ }
+
+ .length {
+   display: flex;
+   margin: auto;
+   align-items: center;
+   width: 400px;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   margin-top: 20px;
+ }
+
+ .length span {
+  font-weight: bold;
+ }
+
+ .length label {
+  flex: 3;
+ }
+
+ .length input {
+   flex: 1;
+   margin-left: 5px;
+   padding: 10px;
+   border: none;
+   border-radius: 10px;
+   background-color: hwb(0 80% 7%);
+   cursor: pointer;
+   text-align: center;
+ }
+
+ /* Container for checkboxes */
+ .checkbox-container {
+   display: flex;
+   align-items: center;
+   margin: auto;
+   gap: 15px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+ }
+
+ /* Style the label */
+ .charater {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   font-weight: bold;
+   cursor: pointer;
+ }
+
+ /* Style the checkbox */
+ .charater input[type="checkbox"] {
+   appearance: none;
+   width: 18px;
+   height: 18px;
+   border: 2px solid #007bff;
+   border-radius: 4px;
+   position: relative;
+   cursor: pointer;
+   transition: 0.2s;
+ }
+
+ /* Add a checkmark when checked */
+ .charater input[type="checkbox"]:checked {
+   background-color: #007bff;
+   border-color: #007bff;
+ }
+
+ .charater input[type="checkbox"]::after {
+   content: '✔';
+   color: white;
+   font-size: 14px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-weight: bold;
+   display: none;
+ }
+
+ /* Show checkmark when checked */
+ .charater input[type="checkbox"]:checked::after {
+   display: block;
+ }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .content p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .content button {
+    width: 100%;
+    text-align: center;
+  }
+}
