@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Random Password Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,39 +11,75 @@
   <h1>Random Password Generator</h1>
   <p id="text">Create strong and secure passwords to keep your account safe online.</p>
   </div>
-<div class="main-container">
-  <div class="main">
-    <div class="content">
-      <p id="password"></p>
-      <button>generate</button>
+<div class="password-container">
+  <span id="password"></span>
+  <div class="icons">
+    <button id="copyBtn" class="icon-btn">
+    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" fill="white" />
+      <rect x="4" y="8" width="12" height="12" rx="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8 6V5C8 4.44772 8.44772 4 9 4H19C19.5523 4 20 4.44772 20 5V15C20 15.5523 19.5523 16 19 16H18"
+        stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2" />
+    </svg>
+    </button>
+    <!-- Modal for Copy Confirmation -->
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <p>Password copied to clipboard!</p>
+      </div>
     </div>
+    <button id="refreshBtn" class="icon-btn">
+      <svg class="refresh-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"></polyline>
+        <path d="M20.49 15a9 9 0 1 1 2.11-9.36"></path>
+      </svg>
+    </button>
   </div>
-  <button id="copy">Copy</button>
 </div>
 
-<p >Password strength: <span id="strength" class="strength">Very strong</span></p>
-<div class="length">
-  <label>Password length: <br><br><span id="lengthValue">12</span></label>
-  <input class="lenght-input" type="range" id="length" min="6" max="50" value="12">
+
+<div class="customise">
+  <h2>Customize your password</h2>
+  <hr>
+  <div class="password-settings">
+    <!-- Flex container -->
+    <div class="flex-container">
+
+    <!-- Left Section: Password Length -->
+    <div class="left-section">
+    <label>Password Length</label>
+    <div class="slider-container">
+      <input type="number" id="lengthValue" value="12" min="1" max="50">
+      <input class="length-input" type="range" id="length" min="1" max="50" value="12">
+    </div>
+    </div>
+
+    <!-- Right Section: Checkbox Group -->
+    <div class="right-section">
+    <div class="checkbox-group">
+      <label class="checkbox">
+        <input type="checkbox" id="uppercase" checked>
+        <span class="checkmark"></span> Uppercase
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="lowercase" checked>
+        <span class="checkmark"></span> Lowercase
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="numbers" checked>
+        <span class="checkmark"></span> Numbers
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="symbols" checked>
+        <span class="checkmark"></span> Symbols
+      </label>
+    </div>
+    </div>
+    </div>
+  </div>
 </div>
-<div class="checkbox-container">
-  <label class="charater">
-    <input type="checkbox" id="uppercase" checked>
-    ABC
-  </label>
-  <label class="charater">
-    <input type="checkbox" id="lowercase" checked>
-    abc
-  </label>
-  <label class="charater">
-    <input type="checkbox" id="numbers" checked>
-    123
-  </label>
-  <label class="charater">
-    <input type="checkbox" id="symbols">
-    #$&
-  </label>
-</div>
+
   <script src="index.js"></script>
 </body>
 </html>
